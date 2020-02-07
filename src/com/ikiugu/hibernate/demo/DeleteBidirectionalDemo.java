@@ -25,12 +25,9 @@ public class DeleteBidirectionalDemo {
 			session.beginTransaction();
 			
 			//get instructor with id
-			InstructorDetail instructorDetail = session.get(InstructorDetail.class, 3);
-			
-			//delete the instructor
-			if (instructorDetail != null) {
-				session.delete(instructorDetail);
-			}
+			InstructorDetail instructorDetail = session.get(InstructorDetail.class, 1);
+		
+			System.out.println("Instructor linked is " + instructorDetail.getInstructor());
 			
 			//commit a transaction
 			session.getTransaction().commit();
